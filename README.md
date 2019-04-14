@@ -31,4 +31,8 @@ No known bugs
 ## Support and Contact Details
 Incase of any issues or inquiries,you can reach me through:
 * Telephone: +(254)702499205
-* Email: emmaKibore@gmail.com 
+* Email: emmaKibore@gmail.com
+
+## License and Copyright details
+* The MIT License (MIT)
+* Copyright (c) 2019 Emma Kibore 
