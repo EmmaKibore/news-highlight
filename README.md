@@ -22,3 +22,8 @@ News Highlight is aweb application that will help users list and preview news ar
 ## Known Bugs
 No known bugs
 
+## Technologies used
+* Python 3.6
+* Flask Framework
+* HTML, CSS and Bootstrap
+* JavaScript
