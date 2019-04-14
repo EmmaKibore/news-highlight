@@ -19,3 +19,6 @@ News Highlight is aweb application that will help users list and preview news ar
 * On your terminal run ./start.py
 * Access the live site using the local host provided
 
+## Known Bugs
+No known bugs
+
