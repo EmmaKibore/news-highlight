@@ -7,6 +7,15 @@ By Emma Kibore
 News Highlight is aweb application that will help users list and preview news articles from various sources.This webpage will get you caught up on current affairs from all around the world.
 
 ## BDD
+* The program should return a source's articles when chosen.
+  Given:Sources are available
+  When:A source is chosen
+  Then:Articles from that source are shown
+
+* The program should display images related to the articles
+  Given:A source is chosen
+  When:Articles section loads
+  Then:Images should be displayed  
 
 
 ## Setup/Installation Requirements
