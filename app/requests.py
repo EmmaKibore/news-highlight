@@ -1,18 +1,21 @@
-
 import urllib.request,json
-from .models import source
-Source =source.Source
-Articles = source.Articles
+from .models import Source, Article
+# Source =source.Source
+# Articles = source.Articles
 
 # Getting api key
 api_key = None
+
+#Getting the urls
 base_url = None
 articles_url = None
+
 def configure_request(app):
     global api_key,base_url,articles_url
-    api_key = app.config['API_KEY']
+    api_key = app.config['NEWS_API_KEY']
     base_url = app.config['SOURCE_API_BASE_URL']
     articles_url = app.config['ARTICLES_API_BASE_URL']
+
 def get_sources(name):
     '''
     Function that gets the json response to our url request
@@ -22,14 +25,16 @@ def get_sources(name):
 
 
     with urllib.request.urlopen(get_sources_url) as url:
-        print("ew")
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
         print(get_sources_response)
+
         source_results = None
+
         if get_sources_response["sources"]:
             source_results_list = get_sources_response["sources"]
             source_results = process_results(source_results_list)
+
     return source_results
 
 def process_results(source_list):
@@ -71,6 +76,7 @@ def get_articles(id):
         if get_articles_response['articles']:
             articles_results_list = get_articles_response['articles']
             articles_results = receive_results(articles_results_list)
+            
     return  articles_results
         
 
@@ -96,6 +102,7 @@ def receive_results(articles_list):
         
         articles_object = Articles ( blue, id, title , author, description, urlToImage, publishedAt, url)
         articles_results.append(articles_object)
+
     return articles_results
 
 

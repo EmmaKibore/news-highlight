@@ -27,3 +27,8 @@ No known bugs
 * Flask Framework
 * HTML, CSS and Bootstrap
 * JavaScript
+
+## Support and Contact Details
+Incase of any issues or inquiries,you can reach me through:
+* Telephone: +(254)702499205
+* Email: emmaKibore@gmail.com 
