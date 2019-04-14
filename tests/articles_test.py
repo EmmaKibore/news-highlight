@@ -12,8 +12,8 @@ class ArticleTest(unittest.TestCase):
         '''
         self.new_article = Article('Christine', 'Kenyan Foods', 'The variety and rich culture that exists in Kenyan cuisines', 'https://ktn.co.ke', 'https://ktn.co.ke/image1', '24/06/2012', 'kenyan food is the best')
 
-    # def test_instance(self):
-    #     '''
-    #     Test to check if new_Article instance exists
-    #     '''
-    #     self.assertTrue(isinstance(self.new_article,Article))
+    def test_instance(self):
+        '''
+        Test to check if new_Article instance exists
+        '''
+        self.assertTrue(isinstance(self.new_article,Article))
