@@ -8,9 +8,9 @@ News Highlight is aweb application that will help users list and preview news ar
 
 ## Behaviour Driven Developement
 * The program should return a source's articles when chosen.
-  > Given:Sources are available
-  > When:A source is chosen
-  > Then:Articles from that source are shown
+  - Given:Sources are available.
+  - When:A source is chosen.
+  - Then:Articles from that source are shown.
 
 * The program should display images related to the articles
   Given:A source is chosen
