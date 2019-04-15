@@ -1,5 +1,5 @@
 import urllib.request,json
-from .models import Source, Article
+from .models import Source, Articles
 # Source =source.Source
 # Articles = source.Articles
 
@@ -12,19 +12,19 @@ articles_url = None
 
 def configure_request(app):
     global api_key,base_url,articles_url
-    api_key = app.config['NEWS_API_KEY']
+    api_key = app.config['API_KEY']
     base_url = app.config['SOURCE_API_BASE_URL']
     articles_url = app.config['ARTICLES_API_BASE_URL']
 
-def get_sources(name):
+def get_sources():
     '''
     Function that gets the json response to our url request
     '''
 
-    get_sources_url = base_url.format(name, api_key)
+    get_sources_url = base_url.format(api_key)
 
 
-    with urllib.request.urlopen(get_sources_url) as url:
+    with urllib.request.urlopen('https://newsapi.org/v2/sources?apiKey=0f649dffe4ab4294b23ff8dcfa39be01') as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
         print(get_sources_response)
@@ -51,9 +51,10 @@ def process_results(source_list):
         id = source_item.get('id')
         name = source_item.get('name')
         description = source_item.get('description')
+        url = source_item.get('url')
 
         
-        source_object = Source (id, name, description)
+        source_object = Source (id, name, description, url)
         source_results.append(source_object)
 
     return source_results
