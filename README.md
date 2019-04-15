@@ -13,9 +13,9 @@ News Highlight is aweb application that will help users list and preview news ar
   - Then:Articles from that source are shown.
 
 * The program should display images related to the articles
-  Given:A source is chosen
-  When:Articles section loads
-  Then:Images should be displayed  
+  - Given:A source is chosen
+  - When:Articles section loads
+  - Then:Images should be displayed  
 
 
 ## Setup/Installation Requirements
