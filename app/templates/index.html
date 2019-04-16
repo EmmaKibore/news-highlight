@@ -11,7 +11,7 @@
     
 
        <ul>
-    <div style= "font-size:25px; color:green;" class="container"> 
+    <div style= "font-size:20px; color:green;" class="container"> 
     <marquee style= "font-size:50px; font-family: 'ZCOOL Xiaowei', cursive;">All The News That's Fit to Print!! <img src="https://thumbs.dreamstime.com/thumblarge_5986/59866027.jpg" height="50px"></marquee> 
        <div class="row">
        {% for item in enter%}
@@ -22,7 +22,7 @@
             <hr>
             
             <h6 style="text-decoration:underline;">Diving deeper into {{ item.name }}</h6>
-            <p style="color:black; font-family: 'Cinzel', cursive;">{{ item.description }}</p>
+            <p style="color:black; font-family: 'italic', cursive;">{{ item.description }}</p>
             <hr>
             
             <a href="{{item.url}}"><button style=" border:1px solid darkolivegreen;" class="btn btn-sm">Visit</button></a>
