@@ -3,11 +3,11 @@
 <body>
 {% block content %}
 <div class="container">
-    <h1 style="text-shadow:2px magenta;"> {{ title }} </h1>
+    <h1 style="text-shadow:4px magenta;"> {{ title }} </h1>
     <div class="row">
         {% for article in news %}
         <div class="col-md-2">
-            <div style="box-shadow:2px 2px  paleturquoise; "class="panel panel-default">
+            <div style="box-shadow:2px 2px  turquoise; "class="panel panel-default">
                 <h4> {{ article.title }} </h4>
                 <img src="{{ article.urlToImage}}" height="200px" width="350px">
                 <h4 style="color:black; font-family: 'merienda', serif;"> {{article.description}} </h4>
