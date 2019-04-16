@@ -10,7 +10,7 @@ class ArticleTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_article = Article('Christine', 'Kenyan Foods', 'The variety and rich culture that exists in Kenyan cuisines', 'https://ktn.co.ke', 'https://ktn.co.ke/image1', '24/06/2012', 'kenyan food is the best')
+        self.new_article = Article('TitleTest', 'Kenyan Foods', 'The variety and rich culture that exists in Kenyan cuisines', 'https://ktn.co.ke', 'https://ktn.co.ke/image1', '24/06/2012', 'kenyan food is the best')
 
     def test_instance(self):
         '''

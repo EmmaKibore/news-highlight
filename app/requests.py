@@ -1,7 +1,5 @@
 import urllib.request,json
 from .models import Source, Articles
-# Source =source.Source
-# Articles = source.Articles
 
 # Getting api key
 api_key = None
@@ -27,7 +25,7 @@ def get_sources():
     with urllib.request.urlopen('https://newsapi.org/v2/sources?apiKey=0f649dffe4ab4294b23ff8dcfa39be01') as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
-        # print(get_sources_response)
+        
 
         source_results = None
 
