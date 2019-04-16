@@ -16,18 +16,18 @@ def configure_request(app):
     base_url = app.config['SOURCE_API_BASE_URL']
     articles_url = app.config['ARTICLES_API_BASE_URL']
 
-def get_sources():
+def get_sources(id):
     '''
     Function that gets the json response to our url request
     '''
 
-    get_sources_url = base_url.format(api_key)
+    get_sources_url = base_url.format(id,api_key)
 
 
     with urllib.request.urlopen('https://newsapi.org/v2/sources?apiKey=0f649dffe4ab4294b23ff8dcfa39be01') as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
-        print(get_sources_response)
+        # print(get_sources_response)
 
         source_results = None
 
@@ -52,6 +52,7 @@ def process_results(source_list):
         name = source_item.get('name')
         description = source_item.get('description')
         url = source_item.get('url')
+        urlToImage = source_item.get('urlToImage')
 
         
         source_object = Source (id, name, description, url)

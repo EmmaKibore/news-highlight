@@ -17,6 +17,7 @@
        {% for item in enter%}
        <div class="col-md-6">
         <div class="thumbnail">
+            <img src="{{item.urlToImage}}" alt="{{item.title}}">
             <li style="color:magenta;  font-size:30px;">{{item.name}}</li>
             <hr>
             
@@ -24,7 +25,7 @@
             <p style="color:black; font-family: 'Cinzel', cursive;">{{ item.description }}</p>
             <hr>
             
-            <a href="/articles/{{item.id}}"><button style=" border:1px solid darkolivegreen;" class="btn btn-sm">Visit</button></a>
+            <a href="{{item.url}}"><button style=" border:1px solid darkolivegreen;" class="btn btn-sm">Visit</button></a>
             
         </div>
        </div>
